@@ -22,3 +22,17 @@ app.get("/notes", function(req, res) {
 app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);
 });
+
+app.get("/api/notes", (req, res) => {
+  fs.readFile(__dirname + "/db/db.json", function(err, data) {
+    if (err) {
+      res.writeHead(500, { "Content-Type": "text/html" });
+      res.end(
+        "<html><head><title>Oops</title></head><body><h1>Oops, there was an error</h1></html>"
+      );
+    } else {
+      res.writeHead(200, { "Content-Type": "text/json" });
+      res.end(data);
+    }
+  });
+});
