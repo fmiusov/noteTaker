@@ -16,7 +16,7 @@ Uses fs, express, and path dependencies to navigate html pages and communicate w
 
 **Friday 6:20pm** switched from fs.writeFile to fs.appendfile, however, now I am not able to append the new object into the existing array. 
 
-
+**Friday 7:00pm** fs.writeFile now successfully appends a new object to the array on the db.json when tested in Postman. No unique ids exist yet for these objects, and delete call still needs to be written. 
 
 ## Debug Strategies: 
 
