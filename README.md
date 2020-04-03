@@ -1,8 +1,18 @@
 # NoteTaker
 
+## Links
+Repo: https://github.com/fmiusov/noteTaker
+Heroku: 
+
 ## How it Works
 
 Uses fs, express, and path dependencies to navigate html pages and communicate with json database. 
+
+**Current Status of App:**
+- Successfully runs get requests
+- Successfully uses fs.readfile and fs.write file to read the database and append new notes as json objects into the existing array
+- Does not yet assign unique ids to new objects, and therefore does not delete objects based on unique ids
+- Deployed to Heroku
 
 ## Error Log
 
