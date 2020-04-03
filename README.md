@@ -6,9 +6,13 @@ Uses fs, express, and path dependencies to navigate html pages and communicate w
 
 ## Error Log
 
-My code was originally running well, with successful navigation and json returns. However, after loading the code up on Friday afternoon, despite NO changes being made, the code no longer worked. The error seems to be in part due to index.js not being found.
+**Friday 3:00pm** - My code was originally running well, with successful navigation and json returns. However, after loading the code up on Friday afternoon, despite NO changes being made, the code no longer worked. The error seems to be in part due to index.js not being found.
 
-**Friday 5:30pm Update** See list item 5 of debug strategies. Perhaps on Wednesday and Thursday night I was testing on my localhost and tonight, by habit, I began testing the html by opening in browser from my local path. Despite the error message in both instances, I believe this is working as intended and I am moving on.  
+**Friday 5:30pm** See list item 5 of debug strategies. Perhaps on Wednesday and Thursday night I was testing on my localhost and tonight, by habit, I began testing the html by opening in browser from my local path. Despite the error message in both instances, I believe this is working as intended and I am moving on.  
+
+**Friday 5:40pm** Incorrect usage of callback function when using fs to write to db.json file, I will try pushing note data into a javascript object, converting the object to a string, use fs to write to disk, and then append note to db.json file
+
+**Friday 6:10pm** app.post now successfully creates new JSON and writes to a db.json file, but is currently creating a new db.json file instead of appending to existing. 
 
 ## Debug Strategies: 
 
