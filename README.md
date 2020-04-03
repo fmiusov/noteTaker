@@ -14,6 +14,10 @@ Uses fs, express, and path dependencies to navigate html pages and communicate w
 
 **Friday 6:10pm** app.post now successfully creates new JSON and writes to a db.json file, but is currently creating a new db.json file instead of appending to existing. 
 
+**Friday 6:20pm** switched from fs.writeFile to fs.appendfile, however, now I am not able to append the new object into the existing array. 
+
+
+
 ## Debug Strategies: 
 
 1. Roll back code to previous commits in effort to get pages to work - Failure

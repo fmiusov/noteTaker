@@ -37,23 +37,26 @@ app.get("/api/notes", (req, res) => {
 
 app.post("/api/notes", function (req, res) {
   fs.readFile(__dirname + "/db/db.json", function (err, data) {
+    var newNote = req.body;
+    var existingNotes = JSON.parse(data);
+    existingNotes.push(newNote);
+    fs.writeFile(
+      __dirname + "/db/db.json",
+      JSON.stringify(existingNotes),
+      (err) => {
+        if (err) {
+          console.error(err);
+          return;
+        }
+        console.log("File has been appended");
+      }
+    );
     if (err) {
       res.writeHead(500, { "Content-Type": "text/html" });
       res.end(
         "<html><head><title>Oops</title></head><body><h1>Oops, there was an error</h1></html>"
       );
-    } else {
-      res.writeHead(200, { "Content-Type": "text/json" });
-      res.end(data);
     }
-  });
-  var newNote = req.body;
-  fs.writeFile("db.json", JSON.stringify(newNote), (err) => {
-    if (err) {
-      console.error(err);
-      return;
-    }
-    console.log("File has been created");
   });
 });
 
