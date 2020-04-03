@@ -1,6 +1,6 @@
 {
-  "name": "hotrestaurant",
-  "version": "1.0.1",
+  "name": "note-taker",
+  "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
@@ -11,6 +11,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
   }
 }
